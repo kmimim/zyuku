@@ -11,7 +11,7 @@ h1{
 .stapro, .course {
     width: 50%;
     height: 70px;
-    background-color: rgb(68, 68, 65);
+    background-color: rgb(43, 43, 41);
     text-align: center;
     margin: 10px; /* ボタン間にスペースを追加 */
     box-sizing: border-box; /* パディングとボーダーを含めて幅を計算 */
