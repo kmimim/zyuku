@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>錬成ゼミ　冬期 国語 発展 小５</title>
+    <style>
+        .letter-button {
+            font-size: 20px;
+            margin: 5px;
+            padding: 10px;
+        }
+        #display {
+            margin-top: 20px;
+            font-size: 24px;
+            line-height: 1.5;
+            white-space: pre-line; /* 改行を反映させるために必要 */
+        }
+    </style>
+</head>
+
+
+<body>
+    <button class="letter-button" onclick="addLetter2('カリキュラム作成講師:\n講座数:\n目的:\n確認テスト内容:\n授業教材:錬成ゼミ　冬期 発展 国語 小５（購入済み）\n宿題教材:錬成ゼミ　冬期 発展 国語 小５（購入済み）\n授業の進め方:\n余った時:\n')">初期内容</button>
+
+    <div>
+        
+        <button class="letter-button" onclick="addLetter('漢字',2,5)">漢字</button>
+        <button class="letter-button" onclick="addLetter('物語（１）',6,9)">物語（１）</button>
+        <button class="letter-button" onclick="addLetter('物語（２）',10,13)">物語（２）</button>
+        <button class="letter-button" onclick="addLetter('語句・言葉の決まり',14,17)">語句・言葉の決まり</button>
+        <button class="letter-button" onclick="addLetter('説明文（１）',18,21)">説明文（１）</button>
+        <button class="letter-button" onclick="addLetter('説明文（２）',22,25)">説明文（２）</button>
+        <button class="letter-button" onclick="addLetter('詩',26,29)">詩</button>
+        <button class="letter-button" onclick="addLetter('総合問題',30,33)">総合問題</button>
+    </div>
+
+    <button class="letter-button" onclick="addLetter2('備考:')">備考</button>
+    <button class="letter-button" onclick="removeLastStep()">消す</button>
+
+
+    <div id="display"></div>
+
+    <script>
+        let items = [];
+
+        function addLetter(letter, number1, number2) {
+            items.push({ letter, number1 ,number2 });
+            updateDisplay();
+        }
+
+        function addLetter2(letter2) {
+            items.push({ letter: letter2,number: null });
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            const display = document.getElementById('display');
+            display.textContent = '';
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].number !== null) {
+                display.textContent += 'No.' + (i ) + ':' + '「 ' + items[i].letter + '」' + 'pp' +  items[i].number1 + '~' + items[i].number2 + '  宿題:pp' + '\n';
+                }else{
+                    display.textContent += items[i].letter  +'\n';
+                }
+            }
+        }
+
+        function removeLastStep(){
+            if (items.length > 0) {
+                items.pop();    //配列の最後の要素を削除
+                updateDisplay();    //表示を更新
+            }
+        }
+
+
+    </script>
+
+
+
+</body>
