@@ -24,19 +24,42 @@
 <body>
     <div>
         
-        <button class="letter-button" onclick="addLetter('正の数・負の数\n',2,5)">正の数・負の数</button>
-        <button class="letter-button" onclick="addLetter('文字と式\n',6,9)">文字と式</button>
-        <button class="letter-button" onclick="addLetter('一次方程式（１）\n',10,13)">一次方程式（１）</button>
-        <button class="letter-button" onclick="addLetter('一次方程式（２）\n',14,17)">一次方程式（２）</button>
-        <button class="letter-button" onclick="addLetter('比例と反比例\n',18,21)">比例と反比例</button>
-        <button class="letter-button" onclick="addLetter('平面図形\n',22,25)">平面図形</button>
+        <button class="letter-button" onclick="addLetter('正の数・負の数',2,5)">正の数・負の数</button>
+        <button class="letter-button" onclick="addLetter('文字と式',6,9)">文字と式</button>
+        <button class="letter-button" onclick="addLetter('一次方程式（１）',10,13)">一次方程式（１）</button>
+        <button class="letter-button" onclick="addLetter('一次方程式（２）',14,17)">一次方程式（２）</button>
+        <button class="letter-button" onclick="addLetter('比例と反比例',18,21)">比例と反比例</button>
+        <button class="letter-button" onclick="addLetter('平面図形',22,25)">平面図形</button>
         <button class="letter-button" onclick="addLetter('空間図形',26,29)">空間図形</button>
         <button class="letter-button" onclick="addLetter('データの分析と活用',30,33)">データの分析と活用</button>
         <button class="letter-button" onclick="addLetter('実力の確認１',34,35)">実力の確認１</button>
-        <button class="letter-button" onclick="addLetter('平面図形',36,37)">平面図形</button>
-        <button class="letter-button" onclick="addLetter('平面図形',38,41)">平面図形</button>
-        <button class="letter-button" onclick="addLetter('平面図形',42,45)">平面図形</button>
+        <button class="letter-button" onclick="addLetter('実力の確認２',36,37)">実力の確認２</button>
+        <button class="letter-button" onclick="addLetter('式の計算',38,41)">式の計算</button>
+        <button class="letter-button" onclick="addLetter('連立方程式（１）',42,45)">連立方程式（１）</button>
+        <button class="letter-button" onclick="addLetter('連立方程式（２）',46,49)">連立方程式（２）</button>
+        <button class="letter-button" onclick="addLetter('一次関数（１）',50,53)">一次関数（１）</button>
+        <button class="letter-button" onclick="addLetter('一次関数（２）',54,57)">一次関数（２）</button>
+        <button class="letter-button" onclick="addLetter('実力の確認３',58,59)">実力の確認３</button>
+        <button class="letter-button" onclick="addLetter('実力の確認４',60,61)">実力の確認４</button>
+        <button class="letter-button" onclick="addLetter('平行線と合同（１）',62,65)">平行線と合同（１）</button>
+        <button class="letter-button" onclick="addLetter('平行線と合同（２）',66,69)">平行線と合同（２）</button>
+        <button class="letter-button" onclick="addLetter('三角形と四角形（１）',70,73)">三角形と四角形（１）</button>
 
+        
+        <button class="letter-button" onclick="addLetter('三角形と四角形（２）',70,73)">三角形と四角形（２）</button>
+        <button class="letter-button" onclick="addLetter('確率',70,73)">確率</button>
+        <button class="letter-button" onclick="addLetter('データの比較',70,73)">データの比較</button>
+        <button class="letter-button" onclick="addLetter('実力の確認５',70,73)">実力の確認５</button>
+        <button class="letter-button" onclick="addLetter('実力の確認６',70,73)">実力の確認６</button>
+        <button class="letter-button" onclick="addLetter('多項式（１）',70,73)">多項式（１）</button>
+        <button class="letter-button" onclick="addLetter('多項式（２）',70,73)">多項式（２）</button>
+        <button class="letter-button" onclick="addLetter('平方根',70,73)">平方根</button>
+        <button class="letter-button" onclick="addLetter('二次方程式（１）',70,73)">二次方程式（１）</button>
+        <button class="letter-button" onclick="addLetter('二次方程式（２）',70,73)">二次方程式（２）</button>
+        <button class="letter-button" onclick="addLetter('実力の確認５',70,73)">実力の確認５</button>
+        <button class="letter-button" onclick="addLetter('実力の確認５',70,73)">実力の確認５</button>
+        
+        
     </div>
 
     <button class="letter-button" onclick="addLetter2('備考:')">備考</button>
@@ -63,7 +86,7 @@
             display.textContent = '';
             for (let i = 0; i < items.length; i++) {
                 if (items[i].number !== null) {
-                display.textContent += 'No.' + (i ) + ':' + '「 ' + items[i].letter + '」' + 'pp' +  items[i].number1 + '~' + items[i].number2 + '  宿題:pp' + '\n';
+                display.textContent += 'No.' + (i+1) + ':' + '「 ' + items[i].letter + '」' + 'pp' +  items[i].number1 + '~' + items[i].number2 + '  宿題:pp' + '\n';
                 }else{
                     display.textContent += items[i].letter  +'\n';
                 }
